@@ -1,59 +1,185 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🍽️ Ristorante — Web Application
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Web application per la gestione di un ristorante, sviluppata con **Laravel**.
 
-## About Laravel
+Il progetto è stato realizzato per mettere in pratica lo sviluppo di una web application completa, dalla gestione del database all'autenticazione degli utenti, fino alla gestione del menu e delle prenotazioni.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Funzionalità
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 👤 Autenticazione
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Registrazione e accesso degli utenti
+* Gestione del profilo personale
+* Aggiornamento della password
+* Recupero della password
+* Verifica dell'indirizzo email
 
-## Learning Laravel
+### 🍴 Gestione del menu
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* Visualizzazione del menu
+* Creazione di nuovi elementi
+* Modifica degli elementi del menu
+* Eliminazione degli elementi
+* Gestione del menu tramite area amministrativa
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 📅 Gestione delle prenotazioni
 
-## Laravel Sponsors
+* Creazione di nuove prenotazioni
+* Visualizzazione delle prenotazioni
+* Gestione delle prenotazioni dall'area amministrativa
+* Pagina di conferma della prenotazione
+* Invio di email relative alle prenotazioni
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔐 Area amministrativa
 
-### Premium Partners
+Area dedicata alla gestione del menu e delle prenotazioni del ristorante.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Tecnologie utilizzate
 
-## Contributing
+| Tecnologia       | Utilizzo                           |
+| ---------------- | ---------------------------------- |
+| **PHP**          | Linguaggio di programmazione       |
+| **Laravel**      | Framework backend                  |
+| **MySQL**        | Database                           |
+| **Blade**        | Template engine                    |
+| **Tailwind CSS** | Styling e interfaccia              |
+| **JavaScript**   | Funzionalità frontend              |
+| **Vite**         | Build tool e gestione degli asset  |
+| **Git**          | Versionamento del codice           |
+| **GitHub**       | Repository e gestione del progetto |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📂 Struttura del progetto
 
-## Code of Conduct
+```text
+app/                Logica applicativa
+bootstrap/          Bootstrap dell'applicazione
+config/             Configurazione
+database/           Migrazioni, factory e seeders
+public/             File pubblici e entry point
+resources/          Viste Blade, CSS e JavaScript
+routes/             Route dell'applicazione
+storage/             File generati dall'applicazione
+tests/              Test automatici
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🚀 Installazione
 
-## Security Vulnerabilities
+### Requisiti
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Per eseguire il progetto sono necessari:
 
-## License
+* PHP
+* Composer
+* Node.js
+* npm
+* MySQL
+* Git
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 1. Clonare il repository
+
+```bash
+git clone https://github.com/MariB3195/ristorante.git
+cd ristorante
+```
+
+### 2. Installare le dipendenze PHP
+
+```bash
+composer install
+```
+
+### 3. Installare le dipendenze frontend
+
+```bash
+npm install
+```
+
+### 4. Configurare l'ambiente
+
+Copiare il file `.env.example` e creare il file `.env`.
+
+Su Windows:
+
+```bash
+copy .env.example .env
+```
+
+Su macOS/Linux:
+
+```bash
+cp .env.example .env
+```
+
+Generare la chiave dell'applicazione:
+
+```bash
+php artisan key:generate
+```
+
+Successivamente configurare nel file `.env` i parametri relativi al database.
+
+### 5. Configurare il database
+
+Creare un database MySQL e inserire le relative credenziali nel file `.env`.
+
+Eseguire quindi le migrazioni:
+
+```bash
+php artisan migrate
+```
+
+### 6. Avviare Laravel
+
+```bash
+php artisan serve
+```
+
+### 7. Avviare Vite
+
+In un secondo terminale:
+
+```bash
+npm run dev
+```
+
+L'applicazione sarà disponibile normalmente all'indirizzo:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 🔒 Sicurezza
+
+Il file `.env` contiene configurazioni e credenziali dell'ambiente locale e **non deve essere caricato nel repository**.
+
+Il progetto utilizza `.gitignore` per escludere file e directory che non devono essere versionati, come configurazioni locali e dipendenze generate.
+
+## 🎯 Obiettivi del progetto
+
+Attraverso questo progetto ho messo in pratica diversi aspetti dello sviluppo web con Laravel:
+
+* architettura MVC
+* routing
+* controller e model
+* migrations e gestione del database
+* autenticazione
+* validazione dei dati
+* gestione dei form
+* invio di email
+* sviluppo di interfacce con Blade
+* styling con Tailwind CSS
+* gestione degli asset con Vite
+* test automatici
+* utilizzo di Git e GitHub
+
+## 🔗 Repository
+
+Il codice sorgente del progetto è disponibile su GitHub:
+
+https://github.com/MariB3195/ristorante
+
+## 👨‍💻 Autore
+
+**MariB3195**
+
+Progetto realizzato come esercizio pratico di sviluppo web con **PHP e Laravel**.
