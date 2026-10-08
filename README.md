@@ -239,13 +239,13 @@ This project was created to practice and demonstrate:
 
 ## 📸 Screenshots
 
-Screenshots can be added here to showcase:
+### 🍽️ Menu Management
 
-* Home page
-* Restaurant menu
-* Reservation page
-* User profile
-* Administration area
+![Restaurant menu management](./assets/menu.png)
+
+### 📋 Reservation Management
+
+![Restaurant reservation management](./assets/prenotazioni.png)
 
 ---
 
