@@ -1,72 +1,102 @@
-# 🍽️ Ristorante — Web Application
+# 🍽️ Ristorante — Laravel Web Application
 
-Web application per la gestione di un ristorante, sviluppata con **Laravel**.
+> Full-stack web application for restaurant management, built with PHP and Laravel.
 
-Il progetto è stato realizzato per mettere in pratica lo sviluppo di una web application completa, dalla gestione del database all'autenticazione degli utenti, fino alla gestione del menu e delle prenotazioni.
+**Ristorante** is a web application developed to practice and demonstrate modern web development with **Laravel**, covering authentication, database management, menu administration and table reservations.
 
-## ✨ Funzionalità
+The project combines a Laravel backend with a responsive frontend built using **Blade and Tailwind CSS**.
 
-### 👤 Autenticazione
+---
 
-* Registrazione e accesso degli utenti
-* Gestione del profilo personale
-* Aggiornamento della password
-* Recupero della password
-* Verifica dell'indirizzo email
+## ✨ Features
 
-### 🍴 Gestione del menu
+### 👤 Authentication
 
-* Visualizzazione del menu
-* Creazione di nuovi elementi
-* Modifica degli elementi del menu
-* Eliminazione degli elementi
-* Gestione del menu tramite area amministrativa
+* User registration and login
+* Personal profile management
+* Password update
+* Password recovery
+* Email verification
 
-### 📅 Gestione delle prenotazioni
+### 🍴 Menu Management
 
-* Creazione di nuove prenotazioni
-* Visualizzazione delle prenotazioni
-* Gestione delle prenotazioni dall'area amministrativa
-* Pagina di conferma della prenotazione
-* Invio di email relative alle prenotazioni
+* Menu visualization
+* Create menu items
+* Edit menu items
+* Delete menu items
+* Administrative menu management
 
-### 🔐 Area amministrativa
+### 📅 Reservation Management
 
-Area dedicata alla gestione del menu e delle prenotazioni del ristorante.
+* Create restaurant reservations
+* View reservations
+* Administrative reservation management
+* Reservation confirmation page
+* Email notifications related to reservations
 
-## 🛠️ Tecnologie utilizzate
+### 🔐 Administration
 
-| Tecnologia       | Utilizzo                           |
-| ---------------- | ---------------------------------- |
-| **PHP**          | Linguaggio di programmazione       |
-| **Laravel**      | Framework backend                  |
-| **MySQL**        | Database                           |
-| **Blade**        | Template engine                    |
-| **Tailwind CSS** | Styling e interfaccia              |
-| **JavaScript**   | Funzionalità frontend              |
-| **Vite**         | Build tool e gestione degli asset  |
-| **Git**          | Versionamento del codice           |
-| **GitHub**       | Repository e gestione del progetto |
+A dedicated administrative area allows authorized users to manage:
 
-## 📂 Struttura del progetto
+* Restaurant menu
+* Reservations
+* Application data
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology       | Purpose                      |
+| ---------------- | ---------------------------- |
+| **PHP**          | Backend programming language |
+| **Laravel**      | Web application framework    |
+| **MySQL**        | Relational database          |
+| **Blade**        | Server-side templating       |
+| **Tailwind CSS** | UI styling                   |
+| **JavaScript**   | Frontend interactions        |
+| **Vite**         | Frontend asset management    |
+| **Git**          | Version control              |
+| **GitHub**       | Source code management       |
+
+---
+
+## 🏗️ Architecture
+
+The project follows the Laravel MVC architecture.
 
 ```text
-app/                Logica applicativa
-bootstrap/          Bootstrap dell'applicazione
-config/             Configurazione
-database/           Migrazioni, factory e seeders
-public/             File pubblici e entry point
-resources/          Viste Blade, CSS e JavaScript
-routes/             Route dell'applicazione
-storage/             File generati dall'applicazione
-tests/              Test automatici
+app/                Application logic
+bootstrap/          Framework bootstrap
+config/             Application configuration
+database/           Migrations, factories and seeders
+public/              Public assets and entry point
+resources/           Blade views, CSS and JavaScript
+routes/              Application routes
+storage/             Generated application files
+tests/               Automated tests
 ```
 
-## 🚀 Installazione
+---
 
-### Requisiti
+## 🗄️ Database
 
-Per eseguire il progetto sono necessari:
+The application uses **MySQL** as its relational database.
+
+Laravel migrations are used to define and manage the database structure.
+
+To initialize the database:
+
+```bash
+php artisan migrate
+```
+
+---
+
+## 🚀 Installation
+
+### Requirements
+
+Before running the project, make sure you have installed:
 
 * PHP
 * Composer
@@ -75,111 +105,171 @@ Per eseguire il progetto sono necessari:
 * MySQL
 * Git
 
-### 1. Clonare il repository
+---
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/MariB3195/ristorante.git
 cd ristorante
 ```
 
-### 2. Installare le dipendenze PHP
+---
+
+### 2. Install PHP dependencies
 
 ```bash
 composer install
 ```
 
-### 3. Installare le dipendenze frontend
+---
+
+### 3. Install frontend dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Configurare l'ambiente
+---
 
-Copiare il file `.env.example` e creare il file `.env`.
+### 4. Configure the environment
 
-Su Windows:
+Create your local `.env` file from the example:
+
+**Windows**
 
 ```bash
 copy .env.example .env
 ```
 
-Su macOS/Linux:
+**macOS / Linux**
 
 ```bash
 cp .env.example .env
 ```
 
-Generare la chiave dell'applicazione:
+Generate the Laravel application key:
 
 ```bash
 php artisan key:generate
 ```
 
-Successivamente configurare nel file `.env` i parametri relativi al database.
+Then configure the database credentials inside `.env`.
 
-### 5. Configurare il database
+---
 
-Creare un database MySQL e inserire le relative credenziali nel file `.env`.
+### 5. Configure the database
 
-Eseguire quindi le migrazioni:
+Create a MySQL database and update the corresponding values in `.env`.
+
+Run the migrations:
 
 ```bash
 php artisan migrate
 ```
 
-### 6. Avviare Laravel
+---
+
+### 6. Start Laravel
 
 ```bash
 php artisan serve
 ```
 
-### 7. Avviare Vite
+---
 
-In un secondo terminale:
+### 7. Start Vite
+
+Open a second terminal and run:
 
 ```bash
 npm run dev
 ```
 
-L'applicazione sarà disponibile normalmente all'indirizzo:
+The application will normally be available at:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-## 🔒 Sicurezza
+---
 
-Il file `.env` contiene configurazioni e credenziali dell'ambiente locale e **non deve essere caricato nel repository**.
+## 🔒 Security & Configuration
 
-Il progetto utilizza `.gitignore` per escludere file e directory che non devono essere versionati, come configurazioni locali e dipendenze generate.
+Sensitive environment configuration should never be committed to the repository.
 
-## 🎯 Obiettivi del progetto
+The project uses `.gitignore` to exclude local configuration and generated dependencies.
 
-Attraverso questo progetto ho messo in pratica diversi aspetti dello sviluppo web con Laravel:
+The `.env` file should remain local and should not be uploaded to GitHub.
 
-* architettura MVC
-* routing
-* controller e model
-* migrations e gestione del database
-* autenticazione
-* validazione dei dati
-* gestione dei form
-* invio di email
-* sviluppo di interfacce con Blade
-* styling con Tailwind CSS
-* gestione degli asset con Vite
-* test automatici
-* utilizzo di Git e GitHub
+---
 
-## 🔗 Repository
+## 🧪 Testing
 
-Il codice sorgente del progetto è disponibile su GitHub:
+The project includes a dedicated `tests/` directory for automated tests.
 
-https://github.com/MariB3195/ristorante
+Laravel's testing tools can be executed with:
 
-## 👨‍💻 Autore
+```bash
+php artisan test
+```
+
+---
+
+## 🎯 Learning Goals
+
+This project was created to practice and demonstrate:
+
+* MVC architecture
+* Laravel routing
+* Controllers and Models
+* Database migrations
+* MySQL integration
+* Authentication
+* Form handling
+* Data validation
+* Email notifications
+* Blade templating
+* Tailwind CSS
+* Vite asset management
+* Automated testing
+* Git and GitHub workflow
+
+---
+
+## 📸 Screenshots
+
+Screenshots can be added here to showcase:
+
+* Home page
+* Restaurant menu
+* Reservation page
+* User profile
+* Administration area
+
+---
+
+## 🔮 Future Improvements
+
+Possible future improvements include:
+
+* Online deployment
+* Restaurant availability management
+* Improved reservation calendar
+* Role-based permissions
+* Enhanced administration dashboard
+* Automated deployment
+* Additional automated tests
+* Improved mobile experience
+
+---
+
+## 👨‍💻 Author
 
 **MariB3195**
 
-Progetto realizzato come esercizio pratico di sviluppo web con **PHP e Laravel**.
+GitHub: [@MariB3195](https://github.com/MariB3195)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star.
